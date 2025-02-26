@@ -13,13 +13,28 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
         <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <link href="css/stylesiniciar.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <!-- De Cembo123 - Trabajo propio, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3727875-->
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavpolitica">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/nav-logo.png" alt="..." width="80" /></a>
-                <a href="index.html">Volver</a>
+                <a class="navbar-brand" href="#page-top"><a href="index.html"><img src="./Imagenes/TrLogo.png" width="100" height="100"></a></a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                       
+
+                
+                        
+                <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="index.html">Pagina principal</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!--Formulario-->
@@ -27,7 +42,7 @@
         <div class="col-sm-8 main-section">
             <div class="modal-content">
                 <div class="col-12 user-img">
-                    <img src="https://github.com/1Problema/ProjectoFinal/blob/66b0daca421e7dab98adaaef75f10c461006ca17/Imagenes/TrLogo.png" th:src="@{/img/user.png}"/>
+                    <img src="./Imagenes/TrLogo.png" th:src="@{/img/user.png}"/>
                 </div>
                     <form class="col-12" action="conexion_bd.php" method="post">
                     <div class="form-group" id="user-group">

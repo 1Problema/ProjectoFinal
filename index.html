@@ -530,41 +530,89 @@
                 <!-- Formulario Sección Contactanos-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Nombre-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Introduce tu nombre" data-sb-validations="required" />
-                                <label for="name">Nombre</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Este campo es obligatorio.</div>
-                            </div>
-                            <!-- Email-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Dirección de correo electrónico</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Este campo es obligatorio.</div>
-                            </div>
-                            <!-- Telefono-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Teléfono</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Este campo es obligatorio.</div>
-                            </div>
-                            <!-- Mensaje-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Introduce el mensaje" style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Escribe tu mensaje aquí...</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Este campo es obligatorio.</div>
-                            </div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
-                            <!-- Submit success message-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Formulario completado</div>
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        <form method="POST" action="./sendemail.php" class="needs-validation" novalidate>
+
+                            <div class="container mt-5">
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarNombre">Nombre:<span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="validarNombre" name="validarNombre" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarApellidos">Apellidos:<span class="red">*</span></label>
+                                        <input type="text" class="form-control" id="validarApellidos" name="validarApellidos" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarEmail">Email:<span class="red">*</span></label>
+                                        <input type="email" class="form-control" id="validarEmail" name="validarEmail" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarTelefono">Teléfono:</label>
+                                        <input type="number" class="form-control" id="validarTelefono" name="validarTelefono" max="999999999">
+                                    </div>
+                                </div>
+                        
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarTema">Tema:<span class="red">*</span></label>
+                                        <select class="custom-select" id="validarTema" name="validarTema" required>
+                                            <option selected disabled value="">Selecciona...</option>
+                                            <option value="Contacta con secretaria">Contacta con secretaria</option>
+                                            <option value="Propuesta de colaboración/mejora">Propuesta de colaboración/mejora</option>
+                                            <option value="Eliminar mis Datos">Eliminar mis Datos</option>
+                                            <option value="Otras cuestiones">Otras cuestiones</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-row">
+                                    <div class="col-12 mb-3">
+                                        <label for="validarAsunto">Asunto:</label>
+                                        <input type="text" class="form-control" id="validarAsunto" name="validarAsunto" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-group">
+                                    <label for="validationMensaje">Mensaje:<span class="red">*</span></label>
+                                    <textarea class="form-control" id="validationMensaje" name="validationMensaje" rows="4" required></textarea>
+                                </div>
+                        
+                                <div class="form-group mb-3">
+                                    <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+                                    <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
                                 </div>
                             </div>
+                        
                         </form>
+                        
+                        <script>
+                            (function() {
+                                'use strict';
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    var forms = document.getElementsByClassName('needs-validation');
+                                    Array.prototype.forEach.call(forms, function(form) {
+                                        form.addEventListener('submit', function(event) {
+                                            // Validar el formulario
+                                            if (form.checkValidity() === false) {
+                                                event.preventDefault();  // Detener el envío
+                                                event.stopPropagation(); // Evitar otras propagaciones
+                                            }
+                                            form.classList.add('was-validated'); // Agregar clase para mostrar los estilos de validación
+                                        }, false);
+                                    });
+                                }, false);
+                            })();
+                        </script>
+                        
                     </div>
                 </div>
             </div>
