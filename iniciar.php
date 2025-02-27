@@ -80,6 +80,12 @@
                                 <input name="teléfono" type="phone" placeholder="Número de Teléfono" required>
                                 <!-- Submit Button-->
                                 <button type="submit">Enviar</button>
+                                <script src="https://www.google.com/recaptcha/api.js"></script>
+                                <button class="g-recaptcha" 
+                                    data-sitekey="6Lc1eeMqAAAAANwJh2TfyXasFwmHu21-KQIaVYOm" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>Submit</button>
+                                    <script src="https://www.google.com/recaptcha/api.js?render=6Lc1eeMqAAAAANwJh2TfyXasFwmHu21-KQIaVYOm"></script>
 
                                 <div class="btn-cerrar">
                                     <label for="btn-modal1">Cerrar</label>

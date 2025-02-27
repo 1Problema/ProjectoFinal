@@ -77,3 +77,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// Función para validar el reCaptcha
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+
