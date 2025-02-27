@@ -1,44 +1,61 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>IES TorreRoja</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" a href="./Imagenes/TrLogo.png"/>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navegación-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><a href="index.html"><img src="./Imagenes/TrLogo.png" width="100" height="100"></a></a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Recursos">Recursos</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#servicios">Opcions Acadèmiques</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#FAQ">FAQ</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacte</a></li>
-                
-                        
-                <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="iniciar.php">Iniciar Sesion</a></li>
-                    </ul>
-                </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>IES TorreRoja</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./Imagenes/TrLogo.png"/>
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="./Imagenes/TrLogo.png" width="100" height="100">
+            </a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Recursos">Recursos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#servicios">Opcions Acadèmiques</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#FAQ">FAQ</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacte</a></li>
+
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <!-- Si el usuario ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded">Bienvenido, <?php echo $_SESSION['username']; ?></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout.php">Cerrar Sesión</a>
+                        </li>
+                    <?php else: ?>
+                        <!-- Si el usuario NO ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="iniciar.php">Iniciar Sesión</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
         <!-- Sección Portada-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
@@ -84,10 +101,10 @@
                     <div>
                         <ul>
                             <div class="col-12 text-center mb-4">
-                                <a href="./quiensomos.html" class="btn btn-primary m-2">L'Institut</a>
-                                <a href="./ESO/horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                <a href="materias.html" class="btn btn-primary m-2">Materias</a>
+                                <a href="./quiensomos.php" class="btn btn-primary m-2">L'Institut</a>
+                                <a href="./ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                 
                             </div>
                         </ul>
@@ -237,10 +254,10 @@
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horario.html" class="btn btn-primary m-2">Horario</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                            <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                            <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                            <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -288,10 +305,10 @@
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horario.html" class="btn btn-primary m-2">Horario</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                            <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                            <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                            <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -340,10 +357,10 @@
                                        
                                        Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                        <div class="col-12 text-center mb-4">
-                                        <a href="horario.html" class="btn btn-primary m-2">Horario</a>
-                                        <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                        <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                        <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                        <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                        <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                        <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                        <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                     </div>
                                        <button class="btn btn-primary" data-bs-dismiss="modal">
                                        <i class="fas fa-xmark fa-fw"></i>

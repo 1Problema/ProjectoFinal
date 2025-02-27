@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,20 +10,20 @@
         <meta name="author" content="" />
         <title>IES TorreRoja</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" a href="./Imagenes/TrLogo.png"/>
+        <link rel="icon" type="image/x-icon" a href="../Imagenes/TrLogo.png"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navegación-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><a href="index.html"><img src="./Imagenes/TrLogo.png" width="100" height="100"></a></a>
+                <a class="navbar-brand" href="#page-top"><a href="../index.php"><img src="../Imagenes/TrLogo.png" width="100" height="100"></a></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -29,8 +32,23 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#servicios">Opcions Acadèmiques</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacte</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="quiensomos.html">Qui Som</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../quiensomos.php">Qui Som</a></li>
+                        <?php if (isset($_SESSION['username'])): ?>
+                        <!-- Si el usuario ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded">Bienvenido, <?php echo $_SESSION['username']; ?></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout.php">Cerrar Sesión</a>
+                        </li>
+                    <?php else: ?>
+                        <!-- Si el usuario NO ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="iniciar.php">Iniciar Sesión</a>
+                        </li>
+                    <?php endif; ?>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="../iniciar.php">Iniciar Sesion</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -39,7 +57,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Imagen Portada-->
-                <img class="masthead-avatar mb-5" src="./Imagenes/TrLogo.png" alt="..." />
+                <img class="masthead-avatar mb-5" src="../Imagenes/TrLogo.png" alt="..." />
                 <!-- Titulo Portada-->
                 <h1 class="masthead-heading text-uppercase mb-0">Institut Torre Roja</h1>
                 <!-- Icono separador-->
@@ -73,7 +91,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid nume" src="./Imagenes/uno.png" alt="..." />
+                        <img class="img-fluid nume" src="../Imagenes/uno.png" alt="..." />
                     </div>
                 </div>
                 <!-- Servicios Item 1-->
@@ -101,7 +119,7 @@
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                     
                                 <!-- Servicios Item1 Imagen-->
-                                <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                 <!-- Servicios Item1 Texto-->
                                 <h2>Horario Grupo B</h2>
                                 <p class="mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu varius sem. Donec ut tellus a quam venenatis vehicula et semper felis. Nunc metus velit, euismod et varius vel, consequat at nisl. Etiam tempus urna venenatis, ultricies erat eget, facilisis mi. Mauris nec auctor mauris, sed vestibulum sapien. Praesent ut rutrum lorem, eu interdum mauris. Duis condimentum vitae justo vel congue. Quisque id consectetur tellus.
@@ -109,7 +127,7 @@
                                     Maecenas pretium condimentum orci a volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam et nisi dapibus, vulputate erat ac, lobortis nisi. Cras pretium dapibus lorem at ultricies. Vivamus faucibus nulla quis bibendum sagittis. Curabitur id lorem ac metus accumsan vestibulum.
                                     
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
-                                    <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                    <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <div class="col-12 text-center mb-4">
                                         <a href="index.html" class="btn btn-primary m-2">Inicio</a>
                                         <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
@@ -133,7 +151,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid nume" src="./Imagenes/dos.png" alt="..." />
+                        <img class="img-fluid nume" src="../Imagenes/dos.png" alt="..." />
                     </div>
                 </div>
                 <!-- Servicios Item 2-->
@@ -161,7 +179,7 @@
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         
                                     <!-- Servicios Item1 Imagen-->
-                                    <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                    <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <!-- Servicios Item1 Texto-->
                                     <h2>Horario Grupo B</h2>
                                     <p class="mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu varius sem. Donec ut tellus a quam venenatis vehicula et semper felis. Nunc metus velit, euismod et varius vel, consequat at nisl. Etiam tempus urna venenatis, ultricies erat eget, facilisis mi. Mauris nec auctor mauris, sed vestibulum sapien. Praesent ut rutrum lorem, eu interdum mauris. Duis condimentum vitae justo vel congue. Quisque id consectetur tellus.
@@ -169,7 +187,7 @@
                                         Maecenas pretium condimentum orci a volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam et nisi dapibus, vulputate erat ac, lobortis nisi. Cras pretium dapibus lorem at ultricies. Vivamus faucibus nulla quis bibendum sagittis. Curabitur id lorem ac metus accumsan vestibulum.
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
-                                        <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                        <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                         <div class="col-12 text-center mb-4">
                                             <a href="index.html" class="btn btn-primary m-2">Inicio</a>
                                             <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
@@ -193,7 +211,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid nume" src="./Imagenes/tres.png" alt="..." />
+                        <img class="img-fluid nume" src="../Imagenes/tres.png" alt="..." />
                     </div>
                 </div>
                 <!-- Servicios Item 3-->
@@ -221,7 +239,7 @@
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         
                                     <!-- Servicios Item1 Imagen-->
-                                    <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                    <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <!-- Servicios Item1 Texto-->
                                     <h2>Horario Grupo B</h2>
                                     <p class="mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu varius sem. Donec ut tellus a quam venenatis vehicula et semper felis. Nunc metus velit, euismod et varius vel, consequat at nisl. Etiam tempus urna venenatis, ultricies erat eget, facilisis mi. Mauris nec auctor mauris, sed vestibulum sapien. Praesent ut rutrum lorem, eu interdum mauris. Duis condimentum vitae justo vel congue. Quisque id consectetur tellus.
@@ -229,7 +247,7 @@
                                         Maecenas pretium condimentum orci a volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam et nisi dapibus, vulputate erat ac, lobortis nisi. Cras pretium dapibus lorem at ultricies. Vivamus faucibus nulla quis bibendum sagittis. Curabitur id lorem ac metus accumsan vestibulum.
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
-                                        <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                        <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                         <div class="col-12 text-center mb-4">
                                             <a href="index.html" class="btn btn-primary m-2">Inicio</a>
                                             <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
@@ -254,7 +272,7 @@
                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                        </div>
-                       <img class="img-fluid nume" src="./Imagenes/Cuatro.png" alt="..." />
+                       <img class="img-fluid nume" src="../Imagenes/Cuatro.png" alt="..." />
                    </div>
                </div>
                <!-- Servicios Item 3-->
@@ -282,7 +300,7 @@
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                     
                                 <!-- Servicios Item1 Imagen-->
-                                <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                 <!-- Servicios Item1 Texto-->
                                 <h2>Horario Grupo B</h2>
                                 <p class="mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu varius sem. Donec ut tellus a quam venenatis vehicula et semper felis. Nunc metus velit, euismod et varius vel, consequat at nisl. Etiam tempus urna venenatis, ultricies erat eget, facilisis mi. Mauris nec auctor mauris, sed vestibulum sapien. Praesent ut rutrum lorem, eu interdum mauris. Duis condimentum vitae justo vel congue. Quisque id consectetur tellus.
@@ -290,7 +308,7 @@
                                     Maecenas pretium condimentum orci a volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam et nisi dapibus, vulputate erat ac, lobortis nisi. Cras pretium dapibus lorem at ultricies. Vivamus faucibus nulla quis bibendum sagittis. Curabitur id lorem ac metus accumsan vestibulum.
                                     
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
-                                    <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
+                                    <img class="img-fluid rounded mb-5" src="../Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <div class="col-12 text-center mb-4">
                                         <a href="index.html" class="btn btn-primary m-2">Inicio</a>
                                         <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>

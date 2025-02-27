@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         // Login exitoso
         $_SESSION['username'] = $username;
-        header("Location: ./php/index.php"); // Redirige a la página principal
+        header("Location: ./index.php"); // Redirige a la página principal
         exit();
     } else {
         // Error en login

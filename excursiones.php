@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +23,7 @@
         <!-- Navegación-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><a href="index.html"><img src="./Imagenes/TrLogo.png" width="100" height="100"></a></a>
+                <a class="navbar-brand" href="#page-top"><a href="index.php"><img src="./Imagenes/TrLogo.png" width="100" height="100"></a></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -31,7 +34,21 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#servicios">Opcions Acadèmiques</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#FAQ">FAQ</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacte</a></li>
-                
+                        
+                        <?php if (isset($_SESSION['username'])): ?>
+                        <!-- Si el usuario ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded">Bienvenido, <?php echo $_SESSION['username']; ?></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout.php">Cerrar Sesión</a>
+                        </li>
+                    <?php else: ?>
+                        <!-- Si el usuario NO ha iniciado sesión -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="iniciar.php">Iniciar Sesión</a>
+                        </li>
+                    <?php endif; ?>
                         
                 <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="iniciar.php">Iniciar Sesion</a></li>
@@ -84,10 +101,10 @@
                     <div>
                         <ul>
                             <div class="col-12 text-center mb-4">
-                                <a href="./quiensomos.html" class="btn btn-primary m-2">L'Institut</a>
-                                <a href="./ESO/horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                <a href="materias.html" class="btn btn-primary m-2">Materias</a>
+                                <a href="./quiensomos.php" class="btn btn-primary m-2">L'Institut</a>
+                                <a href="./ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                 
                             </div>
                         </ul>
@@ -138,26 +155,71 @@
                 </div>
             
         <section class="Informacion">
-                        <h2 class="ColumnasCentradas" id="FAQ">Materias</h2>
+                        <h2 class="ColumnasCentradas" id="FAQ">Excursiones</h2>
                         <div class="masthead-subheading font-weight-light mb-0">
                             
                             <div class="ColumnasCentradas">
                                 
                                 <div>
                                     <h4>Eso</h4>
-                                    <p>Cada institución educativa impartirá como mínimo 30 horas a la semana para que los estudiantes alcancen los conocimientos académicos necesarios.
-                                        <br>
-                                        En el caso de Matemáticas, y Lengua y Literatura serán seis horas de clase cada una; y para Ciencias Naturales y Estudios Sociales, cuatro.
-                                        <br>
-                                        Inglés se mantendrá con tres horas a la semana; mientras que Educación Artística y Cultural; y Educación Física serán dos.
-                                        <br>
-                                        Las demás materias como Cívica, Acompañamiento vocacional y Animación a la lectura tendrán una hora a la semana.                    
+                                    <p>
+                                        Sortides pedagògiques
+                                        
+                                        SORTIDES I ACTIVITATS COMPLEMENTÀRIES PER NIVELLS
+                                        
+                                        <ul class="list-group">
+                                            <li class="list-group-item active">1r D’ESO</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Projectes per àmbits (STEM, expressió, lingüístic)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Concurs problemes a l’esprint (matemàtiques)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Proves Cangur (matemàtiques)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de Convivència</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de Francès a Montpellier</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Esquiada</a></li>
+                                            </ul>
+                                            
+                                            <li class="list-group-item active">2n D’ESO</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Projectes per àmbits (STEAM, expressió, lingüístic)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Concurs problemes a l’esprint</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Proves Cangur</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >MMACA (Museu de les Matemàtiques a Cornellà)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Esquiada</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de Francès a Montpellier</a></li>
+                                            </ul>
+                                            
+                                            <li class="list-group-item active">3r D’ESO</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Concurs de mates a l’esprint</li>
+                                                <li class="list-group-item">Proves Cangur</li>
+                                                <li class="list-group-item">Esquiada</li>
+                                                <li class="list-group-item">Sortida de Francès a Montpellier</li>
+                                                <li class="list-group-item">Sortida mediació escolar</li>
+                                            </ul>
+                                            
+                                            <li class="list-group-item active">4t D’ESO</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Problemes a l’esprint</li>
+                                                <li class="list-group-item">Esquiada</li>
+                                                <li class="list-group-item">Viatge de final d’etapa</li>
+                                                <li class="list-group-item">Sortida de Francès a Montpellier</li>
+                                                <li class="list-group-item">Sortida de mediació escolar</li>
+                                            </ul>
+                                            
+                                            
+                                        </ul>
+                                        
+                                               
                                         </p>
-                                        <a href="https://www.primicias.ec/sociedad/todas-materias-y-horas-clase-tendran-alumnos-ano-lectivo-2024-2025-ecuador-77509/" class="btn btn-primary m-2">Fuente = Primicias.ec</a>
+                                        <a href="https://agora.xtec.cat/iestorreroja/page/3/" class="btn btn-primary m-2">Tr Web Page</a>
+
+                                       
                                 </div>
                                 <div>
+                                    <img class="img-fluid rounded mb-5" src="https://agora.xtec.cat/iestorreroja/wp-content/uploads/usu1423/2025/01/1737645630248-Olga-Soler-Perez-1024x578.jpg" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="https://agora.xtec.cat/iestorreroja/wp-content/uploads/usu1423/2025/02/IMG-20250205-WA0042-768x1024.jpg" alt="..." />
                                     
-                                    <img class="img-fluid rounded mb-5" src="./Imagenes/HorasEso.png" alt="..." />
+                                    
                                 </div>
                             </div>
                         </div>
@@ -167,19 +229,32 @@
                                 <div class="ColumnasCentradas">
                                     <div>
                                         
-                                        <img class="img-fluid rounded mb-5" src="./Imagenes/HorasBachi.png" alt="..." />
+                                        <img class="img-fluid rounded mb-5" src="https://agora.xtec.cat/iestorreroja/wp-content/uploads/usu1423/2025/01/20250129_090321_Easy-Resize.com_.jpg" alt="..." />
                                     </div>
                                     <div>
                                         <h4>Bachillerato</h4>
-                                        <p>Para los dos primeros años de este Bachillerato los colegios destinarán como mínimo 35 horas a la semana para fortalecer las competencias de los estudiantes en las áreas comunicacionales, matemáticas, digitales y socioemocionales.
-                                            <br>
-                                            Las materias que tendrán mayor carga horaria serán Matemáticas y Lengua y Literatura, con cinco horas semanales cada una.
-                                            <br>
-                                            Mientras que Física, Química, Biología e Inglés se dictarán durante tres horas. Con dos horas aparecen Historia, Educación para la Ciudadanía, Filosofía, Educación Artística y Cultural; Educación Física; y Gestión para el Emprendimiento.
-                                            <br>
-                                            Por último estará Cívica con una hora.               
+                                        <p>
+                                        <ul class="list-group">
+                                                
+                                            <li class="list-group-item active">1r de Batxillerat</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Elna, Rivesaltes i la ruta de l’exili</li>
+                                                <li class="list-group-item">Viatge de fi d’etapa (Itàlia)</li>
+                                                <li class="list-group-item">Jornada</li>
+                                            </ul>
+                                            
+                                            <li class="list-group-item active">2n de Batxillerat</li>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Visita a la Model</li>
+                                                <li class="list-group-item">La Batalla de l’Ebre</li>
+                                                <li class="list-group-item">Jornada d’orientació professional</li>
+                                                <li class="list-group-item">Saló de l’ensenyament</li>
+                                            </ul>   
+                                            
+                                        </ul>
                                             </p>
-                                            <a href="https://www.primicias.ec/sociedad/todas-materias-y-horas-clase-tendran-alumnos-ano-lectivo-2024-2025-ecuador-77509/" class="btn btn-primary m-2">Fuente = Primicias.ec</a>
+                                            <a href="https://agora.xtec.cat/iestorreroja/page/3/" class="btn btn-primary m-2">Tr Web Page</a>
+                                            
                                     </div>
                                     
                                 </div>
@@ -194,17 +269,10 @@
                                 
                                     <div>
                                         <h4>Ciclo</h4>
-                                        <p>A diferencia del Bachillerato en Ciencias, estos alumnos recibirán al menos 40 horas semanales de clases.
-                                            <br>
-                                            Los alumnos de esta modalidad de estudios recibirán tres horas semanales de Matemáticas, Inglés, y Lengua y Literatura.
-                                            <br>
-                                            Se sumarán dos horas de Física; Química; Biología; Historia; Educación para la Ciudadanía; Filosofía; Educación Artística y Cultural; Educación Física; y Emprendimiento y Gestión.
-                                            <br>
-                                            Con la inclusión de Cívica en la malla curricular, estos estudiantes también la estudiarán una hora a la semana.
-                                            <br>
-                                            Debido a que se trata de Bachillerato Técnico, se establecen otras 12 horas para fortalecer los conocimientos de cada área que ofrece el Ministerio. Entre ellas están: Agropecuaria, Industrial, Servicios, Artística, Deportiva y Tecnologías de la Información y las Comunicaciones.
+                                        <p>No Programadas
                                         </p>
-                                            <a href="https://www.primicias.ec/sociedad/todas-materias-y-horas-clase-tendran-alumnos-ano-lectivo-2024-2025-ecuador-77509/" class="btn btn-primary m-2">Fuente = Primicias.ec</a>
+                                            <a href="https://agora.xtec.cat/iestorreroja/page/3/" class="btn btn-primary m-2">Tr Web Page</a>
+                                            
                                     </div>
                                     <div>
                                         
