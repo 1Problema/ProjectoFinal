@@ -36,25 +36,25 @@ session_start();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Inici</a></li>
+                        <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inici</a></li>
                         <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Origenes">Origen</a></li>
                         <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Onde">Donde estamos</a></li>
                         <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#llegar">Como llegar</a></li>
                         <?php if (isset($_SESSION['username'])): ?>
                         <!-- Si el usuario ha iniciado sesión -->
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded">Bienvenido, <?php echo $_SESSION['username']; ?></a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded Aumento">Bienvenido, <?php echo $_SESSION['username']; ?></a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout.php">Cerrar Sesión</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded Aumento" href="logout.php">Cerrar Sesión</a>
                         </li>
                     <?php else: ?>
                         <!-- Si el usuario NO ha iniciado sesión -->
                         <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="iniciar.php">Iniciar Sesión</a>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded Aumento" href="iniciar.php">Iniciar Sesión</a>
                         </li>
                     <?php endif; ?>
-                        <li class="nav-item mx-0 mx-lg-1 Aumento"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="iniciar.php">Iniciar Sesion</a></li>
+                        
                     </ul>
                 </div>
             </div>

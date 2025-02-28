@@ -135,10 +135,10 @@ session_start();
                                     <img class="img-fluid rounded mb-5" src="./Imagenes/Cabezera_TR.png" alt="..." />
                                     <!-- Servicios Item1 Texto-->
                                         <div class="col-12 text-center mb-4">
-                                            <a href="./quiensomos.html" class="btn btn-primary m-2">L'Institut</a>
-                                            <a href="./ESO/horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
+                                            <a href="./quiensomos.php" class="btn btn-primary m-2">L'Institut</a>
+                                            <a href="./ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                             
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -203,10 +203,10 @@ session_start();
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                            <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                            <a href="horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                            <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -305,7 +305,7 @@ session_start();
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="CFGM/horariocfgm.php" class="btn btn-primary m-2">Horario</a>
                                             <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
                                             <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                             <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
@@ -411,10 +411,10 @@ session_start();
                                
                                Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                <div class="col-12 text-center mb-4">
-                                <a href="horario.html" class="btn btn-primary m-2">Horario</a>
-                                <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                             </div>
                                <button class="btn btn-primary" data-bs-dismiss="modal">
                                <i class="fas fa-xmark fa-fw"></i>

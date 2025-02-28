@@ -51,7 +51,7 @@ session_start();
                         </li>
                     <?php endif; ?>
                 <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="iniciar.php">Iniciar Sesion</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -101,10 +101,10 @@ session_start();
                     <div>
                         <ul>
                             <div class="col-12 text-center mb-4">
-                                <a href="./quiensomos.html" class="btn btn-primary m-2">L'Institut</a>
-                                <a href="./ESO/horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                <a href="materias.html" class="btn btn-primary m-2">Materias</a>
+                                <a href="./quiensomos.php" class="btn btn-primary m-2">L'Institut</a>
+                                <a href="./ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                 
                             </div>
                         </ul>
@@ -135,10 +135,10 @@ session_start();
                                     <img class="img-fluid rounded mb-5" src="./Imagenes/Cabezera_TR.png" alt="..." />
                                     <!-- Servicios Item1 Texto-->
                                         <div class="col-12 text-center mb-4">
-                                            <a href="./quiensomos.html" class="btn btn-primary m-2">L'Institut</a>
-                                            <a href="./ESO/horarioeso.html" class="btn btn-primary m-2">Horario</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
+                                            <a href="./quiensomos.php" class="btn btn-primary m-2">L'Institut</a>
+                                            <a href="./ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                             
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">

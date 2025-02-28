@@ -129,10 +129,10 @@ session_start();
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                     <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <div class="col-12 text-center mb-4">
-                                        <a href="index.html" class="btn btn-primary m-2">Inicio</a>
-                                        <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                        <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                        <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                        <a href="index.php" class="btn btn-primary m-2">Inicio</a>
+                                        <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                        <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                        <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                     </div>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
@@ -189,10 +189,10 @@ session_start();
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                         <div class="col-12 text-center mb-4">
-                                            <a href="index.html" class="btn btn-primary m-2">Inicio</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                            <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                            <a href="index.php" class="btn btn-primary m-2">Inicio</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                            <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -249,10 +249,10 @@ session_start();
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                         <div class="col-12 text-center mb-4">
-                                            <a href="index.html" class="btn btn-primary m-2">Inicio</a>
-                                            <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                            <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                            <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                            <a href="index.php" class="btn btn-primary m-2">Inicio</a>
+                                            <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                            <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                            <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                         </div>
                                         <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -310,10 +310,10 @@ session_start();
                                     Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                     <img class="img-fluid rounded mb-5" src="./Imagenes/1A.jpg" alt="Horario Grupo eso" />
                                     <div class="col-12 text-center mb-4">
-                                        <a href="index.html" class="btn btn-primary m-2">Inicio</a>
-                                        <a href="excursiones.html" class="btn btn-primary m-2">Excursiones</a>
-                                        <a href="materias.html" class="btn btn-primary m-2">Materias</a>
-                                        <a href="salidas-laborales.html" class="btn btn-primary m-2">Salidas Laborales</a>
+                                        <a href="index.php" class="btn btn-primary m-2">Inicio</a>
+                                        <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
+                                        <a href="materias.php" class="btn btn-primary m-2">Materias</a>
+                                        <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
                                     </div>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>

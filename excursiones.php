@@ -50,8 +50,7 @@ session_start();
                         </li>
                     <?php endif; ?>
                         
-                <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="iniciar.php">Iniciar Sesion</a></li>
+                
                     </ul>
                 </div>
             </div>
@@ -190,20 +189,20 @@ session_start();
                                             
                                             <li class="list-group-item active">3r D’ESO</li>
                                             <ul class="list-group">
-                                                <li class="list-group-item">Concurs de mates a l’esprint</li>
-                                                <li class="list-group-item">Proves Cangur</li>
-                                                <li class="list-group-item">Esquiada</li>
-                                                <li class="list-group-item">Sortida de Francès a Montpellier</li>
-                                                <li class="list-group-item">Sortida mediació escolar</li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Concurs de mates a l’esprint</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Proves Cangur</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Esquiada</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de Francès a Montpellier</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida mediació escolar</a></li>
                                             </ul>
                                             
                                             <li class="list-group-item active">4t D’ESO</li>
                                             <ul class="list-group">
-                                                <li class="list-group-item">Problemes a l’esprint</li>
-                                                <li class="list-group-item">Esquiada</li>
-                                                <li class="list-group-item">Viatge de final d’etapa</li>
-                                                <li class="list-group-item">Sortida de Francès a Montpellier</li>
-                                                <li class="list-group-item">Sortida de mediació escolar</li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Problemes a l’esprint</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Esquiada</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Viatge de final d’etapa</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de Francès a Montpellier</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Sortida de mediació escolar</a></li>
                                             </ul>
                                             
                                             
@@ -238,17 +237,17 @@ session_start();
                                                 
                                             <li class="list-group-item active">1r de Batxillerat</li>
                                             <ul class="list-group">
-                                                <li class="list-group-item">Elna, Rivesaltes i la ruta de l’exili</li>
-                                                <li class="list-group-item">Viatge de fi d’etapa (Itàlia)</li>
-                                                <li class="list-group-item">Jornada</li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Elna, Rivesaltes i la ruta de l’exili</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Viatge de fi d’etapa (Itàlia)</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Jornada</a></li>
                                             </ul>
                                             
                                             <li class="list-group-item active">2n de Batxillerat</li>
                                             <ul class="list-group">
-                                                <li class="list-group-item">Visita a la Model</li>
-                                                <li class="list-group-item">La Batalla de l’Ebre</li>
-                                                <li class="list-group-item">Jornada d’orientació professional</li>
-                                                <li class="list-group-item">Saló de l’ensenyament</li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Visita a la Model</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >La Batalla de l’Ebre</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Jornada d’orientació professional</a></li>
+                                                <li class="list-group-item"><a href="https://agora.xtec.cat/iestorreroja/?s=esquiada" >Saló de l’ensenyament</a></li>
                                             </ul>   
                                             
                                         </ul>
