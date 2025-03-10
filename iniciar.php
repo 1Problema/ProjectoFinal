@@ -28,9 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                        
-
-                
-                        
+         
                 <!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable --><!-- Menú desplegable -->
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="index.html">Pagina principal</a></li>
                     </ul>
@@ -61,6 +59,15 @@
                         unset($_SESSION['error']);
                     }
                     ?>
+                    <button  onclick="redireccionar()">Agregar Usuario</button>
+
+                    <script>
+                            function redireccionar() {
+                            // Redirigir a la página "agregarempleado.php" cuando se hace clic en el botón
+                            window.location.href = "crearusuario.php";
+                            }
+                    </script>
+
                     <div class="boton-modal1">
                         <label for="btn-modal1">
                             Olvidé mi contraseña
@@ -82,7 +89,7 @@
                                 <button type="submit">Enviar</button>
                                 <script src="https://www.google.com/recaptcha/api.js"></script>
                                 <button class="g-recaptcha" 
-                                    data-sitekey="6Lc1eeMqAAAAANwJh2TfyXasFwmHu21-KQIaVYOm" 
+                                    data-sitekey="6Lekg-oqAAAAAEwvjUv9PKSmFj-alzC8z0h-GvjF" 
                                     data-callback='onSubmit' 
                                     data-action='submit'>Submit</button>
                                     <script src="https://www.google.com/recaptcha/api.js?render=6Lc1eeMqAAAAANwJh2TfyXasFwmHu21-KQIaVYOm"></script>
@@ -98,3 +105,4 @@
         </div>
     </body>
 </html>
+

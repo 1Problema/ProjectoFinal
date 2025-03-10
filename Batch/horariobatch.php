@@ -48,7 +48,7 @@ session_start();
                             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="iniciar.php">Iniciar Sesión</a>
                         </li>
                     <?php endif; ?>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" a href="../iniciar.php">Iniciar Sesion</a></li>
+                        
                     </ul>
                 </div>
             </div>

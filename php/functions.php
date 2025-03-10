@@ -117,7 +117,46 @@ function getVarFromEnvironmentVariables($key)
         throw new Exception("The specified key (" . $key . ") does not exist in the environment file");
     }
 }
+function getUsers() {
+    include "db.php"; // Asegúrate de que este archivo tenga la conexión a la base de datos
 
+    $query = "SELECT * FROM login"; // Cambia "login" por el nombre correcto de la tabla si es necesario
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        die("Error en la consulta: " . mysqli_error($conn));
+    }
+
+    $users = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $users[] = $row;
+    }
+
+    return $users;
+}
+function guardarUsuario($username, $password) {
+    // Conectar a la base de datos
+    $conn = new mysqli("localhost", "root", "", "mi_base_de_datos");
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Preparar y ejecutar la consulta
+    $stmt = $conn->prepare("INSERT INTO usuarios (username, password) VALUES (?, ?)");
+    $stmt->bind_param("ss", $username, $password);
+
+    if ($stmt->execute()) {
+        $stmt->close();
+        $conn->close();
+        return true;
+    } else {
+        $stmt->close();
+        $conn->close();
+        return false;
+    }
+}
 function getDatabase()
 {
     $password = getVarFromEnvironmentVariables("MYSQL_PASSWORD");

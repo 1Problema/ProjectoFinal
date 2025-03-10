@@ -90,7 +90,7 @@ session_start();
                 <div class="row justify-content-center">
                     <!-- Servicios Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal0">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -110,7 +110,7 @@ session_start();
                         </ul>
 
                     </div>
-                    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+                    <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" aria-labelledby="portfolioModal0" aria-hidden="true">
                         
                     <div class="modal-dialog modal-xl">
                     <div class="modal-content">
@@ -203,7 +203,7 @@ session_start();
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate. </p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horarioeso.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="ESO/horarioeso.php" class="btn btn-primary m-2">Horario</a>
                                             <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
                                             <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                             <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
@@ -254,7 +254,7 @@ session_start();
                                         
                                         Vivamus porta ex id enim cursus viverra. Etiam dignissim, ligula et faucibus luctus, lectus diam hendrerit arcu, id tristique sapien elit eget mauris. Nulla facilisi. Nunc eget ultricies erat, quis porta nunc. Sed accumsan risus dui, non semper nisl tristique ut. Etiam id lorem at augue mollis tristique vel a ex. Ut non felis tempus, interdum erat at, rhoncus quam. Vestibulum sit amet erat non diam pulvinar congue. In finibus neque eu bibendum vulputate.</p>
                                         <div class="col-12 text-center mb-4">
-                                            <a href="horario.php" class="btn btn-primary m-2">Horario</a>
+                                            <a href="CFGM/horariocfgm.php" class="btn btn-primary m-2">Horario</a>
                                             <a href="excursiones.php" class="btn btn-primary m-2">Excursiones</a>
                                             <a href="materias.php" class="btn btn-primary m-2">Materias</a>
                                             <a href="salidas-laborales.php" class="btn btn-primary m-2">Salidas Laborales</a>
@@ -545,10 +545,11 @@ session_start();
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Formulario Sección Contactanos-->
+
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form method="POST" action="./sendemail.php" class="needs-validation" novalidate>
-
+                        <form method="POST" action="https://formspree.io/f/mldjredb" class="needs-validation" novalidate>
+                        
                             <div class="container mt-5">
                                 <div class="form-row">
                                     <div class="col-12 mb-3">
@@ -611,27 +612,10 @@ session_start();
                         
                         </form>
                         
-                        <script>
-                            (function() {
-                                'use strict';
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    var forms = document.getElementsByClassName('needs-validation');
-                                    Array.prototype.forEach.call(forms, function(form) {
-                                        form.addEventListener('submit', function(event) {
-                                            // Validar el formulario
-                                            if (form.checkValidity() === false) {
-                                                event.preventDefault();  // Detener el envío
-                                                event.stopPropagation(); // Evitar otras propagaciones
-                                            }
-                                            form.classList.add('was-validated'); // Agregar clase para mostrar los estilos de validación
-                                        }, false);
-                                    });
-                                }, false);
-                            })();
-                        </script>
+                        
                         
                     </div>
-                </div>
+                
             </div>
         </section>
         <!-- Footer-->

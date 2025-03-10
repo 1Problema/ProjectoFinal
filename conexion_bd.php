@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Datos de conexión
     $host = "localhost";
     $dbusername = "admin";
-    $dbpassword = "Phppass";  // Asegúrate de que coincide con tu usuario de la BD
+    $dbpassword = "tu_contraseña";  // Asegúrate de que coincide con tu usuario de la BD
     $dbname = "phpProyect";
 
     // Conectar a la base de datos
