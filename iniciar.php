@@ -89,7 +89,7 @@
                                 <button type="submit">Enviar</button>
                                 <script src="https://www.google.com/recaptcha/api.js"></script>
                                 <button class="g-recaptcha" 
-                                    data-sitekey="6LdEMfAqAAAAACcHFgWhRxb5eb8TTzj53K3dFi7q" 
+                                    data-sitekey="6Lekg-oqAAAAAEwvjUv9PKSmFj-alzC8z0h-GvjF" 
                                     data-callback='onSubmit' 
                                     data-action='submit'>Submit</button>
                                     <script src="https://www.google.com/recaptcha/api.js?render=6Lc1eeMqAAAAANwJh2TfyXasFwmHu21-KQIaVYOm"></script>
